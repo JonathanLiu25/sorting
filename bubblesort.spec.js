@@ -1,14 +1,18 @@
 describe('Bubble Sort', function() {
 
-  // beforeEach(function (){
-  //   bubble =
-  //   spyOn(Object, 'swap').and.callThrough();
-  // });
-  //
-  // it('counts how many swaps happened', function(){
-  //   var bubble = bubbleSort([4,3])
-  //   expect( bubble.swap.calls.count() ).toEqual( 1 );
-  // });
+  beforeEach(function() {
+    spyOn(window, 'swap').and.callThrough();
+  });
+
+  it('handles a large array', function() {
+    expect(bubbleSort([5, 4, 3, 2, 1])).toEqual([1, 2, 3, 4, 5]);
+    expect(swap.calls.count()).toEqual(10);
+  });
+
+  it('handles a large array', function() {
+    expect(bubbleSort([6, 5, 4, 3, 2, 1])).toEqual([1, 2, 3, 4, 5, 6]);
+    expect(swap.calls.count()).toEqual(15);
+  });
 
   it('handles an empty array', function() {
     expect(bubbleSort([])).toEqual([]);
@@ -28,5 +32,8 @@ describe('Bubble Sort', function() {
 
   it('handles a large array w/ negative numbers', function() {
     expect(bubbleSort([75, 34, 2, -12, 45, 3, 0, 97])).toEqual([-12, 0, 2, 3, 34, 45, 75, 97]);
+  });
+  it('handles a large array', function() {
+    expect(bubbleSort([5, 4, 3, 2, 1])).toEqual([1, 2, 3, 4, 5]);
   });
 });
