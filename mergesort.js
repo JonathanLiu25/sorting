@@ -35,8 +35,10 @@ function mergeSort(array) {
     } else {
       var splitArray = split(array);
       // keep splitting until each array had length 1
-
-      return merge(split(splitArray[0]), split(splitArray[1]));
+      var left = mergeSort(splitArray[0])
+      var right = mergeSort(splitArray[1])
+      return merge(left,right)
+      //return merge(split(splitArray[0]), split(splitArray[1]));
     }
 
   // RECURSIVE CASE

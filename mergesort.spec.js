@@ -15,7 +15,7 @@ describe('Merge Array function', function() {
     expect( merge([3, 4, 5, 6, 10], [1, 2, 12, 15]) ).toEqual( [1, 2, 3, 4, 5, 6, 10, 12, 15] );
   });
   it('is able to sort and merge two large arrays into one',  function() {
-    // debugger;
+    
       expect( mergeSort([3, 6, 4, 5, 10, 2, 1, 15, 12]) ).toEqual( [1, 2, 3, 4, 5, 6, 10, 12, 15] );
   });
 
