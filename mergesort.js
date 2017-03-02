@@ -23,25 +23,11 @@ function merge(firstArray, secondArray) {
 }
 
 function mergeSort(array) {
-  // BASE CASE
-    // split array
-  // WHILE SPLIT
-    // if split array is not length 1
-      // split again ..
-  // WHILE MERGE
-    // else mere arrays
-    if (array.length === 1) {
-      return array;
-    } else {
-      var splitArray = split(array);
-      // keep splitting until each array had length 1
-      var left = mergeSort(splitArray[0])
-      var right = mergeSort(splitArray[1])
-      return merge(left,right)
-      //return merge(split(splitArray[0]), split(splitArray[1]));
-    }
-
-  // RECURSIVE CASE
-
-
+  if (array.length === 1) {
+    return array;
+  }
+  var splitArray = split(array);
+  var left = mergeSort(splitArray[0])
+  var right = mergeSort(splitArray[1])
+  return merge(left, right)
 }
