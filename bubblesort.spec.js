@@ -1,15 +1,14 @@
 describe('Bubble Sort', function(){
 
-  var bubble = bubbleSort([75,34,2,45,3,0,97]);
-
-  beforeEach(function (){
-    spyOn(bubble,'sort').and.callThrough();
-  });
-
-  it('counts how many swaps happened', function(){
-    var bub = bubbleSort([4,3])
-    expect( bub.prototype.swap.calls.count() ).toEqual( 1 );
-  });
+  // beforeEach(function (){
+  //   bubble =
+  //   spyOn(Object, 'swap').and.callThrough();
+  // });
+  //
+  // it('counts how many swaps happened', function(){
+  //   var bubble = bubbleSort([4,3])
+  //   expect( bubble.swap.calls.count() ).toEqual( 1 );
+  // });
 
   it('handles an empty array', function(){
     expect( bubbleSort([]) ).toEqual( [] );
